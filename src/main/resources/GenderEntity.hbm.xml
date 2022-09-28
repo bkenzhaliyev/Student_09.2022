@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.com.geek.dao.GenderDao" table="gender" schema="" catalog="models">
+        <id name="id" column="id"/>
+        <property name="gender" column="gender"/>
+    </class>
+
+    <query name="xmlGetGendersQuery">
+        <![CDATA[from Gender g where g.gender Like :gender]]>
+    </query>
+
+</hibernate-mapping>
